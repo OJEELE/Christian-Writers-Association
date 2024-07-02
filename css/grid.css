@@ -1,4 +1,8 @@
 /* Remove the navbar's default margin-bottom and rounded borders */ 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600&display=swap');
+
+$firaSans: 'Fira Sans', sans-serif;
+
 .navbar {
   margin-bottom: 0;
   border-radius: 0;
@@ -7,12 +11,13 @@
 }
 
 .ribbon {
-  width: 60px;
+  width: 50px;
+  height: 50px;
   font-size: 14px;
   padding: 4px;
   position: absolute;
-  right: -15px;
-  top: -5px;
+  right: -5px;
+  top: 0px;
   text-align: center;
   border-radius: 25px;
   transform: rotate(20deg);
@@ -71,25 +76,23 @@ html{
 
 a{
   text-decoration: none;
-  color: #f1f1f1;
+  color: #171d72;
   font-weight: bolder;
   
 }
 .containerTab{
-  padding: 2px;
+  padding: 10px;
   color: white;
+  width: 300px;
 }
 
-.container{
-position: relative;
-  max-width: 100%; /* Maximum width */
-  margin: 0 auto; }
   
-  .col-img{
-    float: right;
+  #col-img{
+    float:none;
     margin: 5px;
-    width: 360px;
-    height: 250px;
+    object-fit: contain;
+    max-width: 800px;
+    max-height: 50%;
     border-radius: 10px;
     border: rgb(237, 234, 234) solid ;
     box-shadow: 10px 10px 5px rgb(27, 70, 138);
@@ -109,6 +112,9 @@ position: relative;
 
 .col-sm-7{
   offset-position: 0;
+}
+img{
+  object-fit: cover;
 }
 /* Set black background color, white text and some padding */
 footer {
@@ -150,6 +156,7 @@ footer {
     max-width: 100%;
     max-height: auto;
     overflow: hidden;
+    object-fit: cover;
     align-items: center;
     border: rgb(136, 92, 177) solid;
     border-radius: 15px;
@@ -163,27 +170,19 @@ footer {
   animation-iteration-count: infinite;
 }
 
-.container{
-position: relative;
-  max-width: 100%; /* Maximum width */
-  margin: 0 auto; 
- }
-  .container .content {
-  position: absolute; /* Position the background text */
-  bottom: 0; 
-  opacity: 10%;
-  background: rgba(104, 44, 183, 0.5); 
-  color: #f1f1f1; 
-  width: 10%;
-  padding: 0
-}
 p, ol{
-  font-size: 24px;
+  font-size: 20px;
+  color:#555;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.foot{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f1f1f1;
 }
 .card-title{
   font-family: cursive;
   color: blue;
-  font-size: 28px;
+  font-size: 24px;
   text-align: left;
 }
 .column {
@@ -191,7 +190,7 @@ p, ol{
   width: auto;
   padding: 10px;
   text-align: justify;
-  font-size: 24px
+  font-size: 20px
   cursor: pointer;
   color: white;
 }
@@ -271,4 +270,39 @@ p, ol{
 .button:hover {
   background-color: #04AA6D; /* Green */
   color: white;
+}
+.blob {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ff0000;
+  opacity: 1;
+  filter: blur(12px);
+  animation: blob-bounce 5s infinite ease;
+}
+
+@keyframes blob-bounce {
+  0% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+  }
+
+  50% {
+    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+  }
+
+  75% {
+    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+  }
+
+  100% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
 }
