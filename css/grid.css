@@ -178,12 +178,12 @@ position: relative;
   padding: 0
 }
 p, ol{
-  font-size: x-large;
+  font-size: 24px;
 }
 .card-title{
   font-family: cursive;
   color: blue;
-  font-size: xx-large;
+  font-size: 28px;
   text-align: left;
 }
 .column {
@@ -191,7 +191,7 @@ p, ol{
   width: auto;
   padding: 10px;
   text-align: justify;
-  font-size: 25px
+  font-size: 24px
   cursor: pointer;
   color: white;
 }
@@ -253,6 +253,7 @@ p, ol{
 .flip-card-front {
   background-color: #bbb;
   color: black;
+-webkit-box-align: center;
 }
 
 /* Style the back side */
