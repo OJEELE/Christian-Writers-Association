@@ -1,0 +1,153 @@
+a:link {
+  color: rgb(1, 14, 29);
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: rgb(0, 28, 128);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(128, 54, 202);
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+.card {
+  width: 300px;
+  height: 250px;
+  transition: all 0.2s;
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.card-inner {
+  width: inherit;
+  height: inherit;
+  background: rgba(139, 213, 240, 0.05);
+  box-shadow: 0 0 10px rgba(207, 180, 180, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+}
+
+.card:hover {
+  transform: scale(1.04) rotate(1deg);
+}
+
+.circle {
+  width: 80px;
+  height:80px;
+  background: radial-gradient(#3387e6, #53ef7d);
+  border-radius: 50%;
+  border: 1px  #348865 solid;
+  position: absolute;
+  animation: move-up6 2s ease-in infinite alternate-reverse;
+}
+
+.circle:nth-child(1) {
+  top: -25px;
+  right: -5px;
+}
+
+.circle:nth-child(2) {
+  bottom: -25px;
+  left: -25px;
+  animation-name: move-down1;
+}
+
+@keyframes move-up6 {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes move-down1 {
+  to {
+    transform: translateY(10px);
+  }
+}
+.thumbnail { 
+top:50px; 
+right:-55px; 
+display:flexbox; 
+z-index:999; 
+cursor: pointer; 
+-webkit-transition-property: all; 
+-webkit-transition-duration: 0.3s; 
+-webkit-transition-timing-function: ease; 
+} 
+
+/*change the number below to scale to the appropriate size*/ 
+.thumbnail:hover { 
+transform: scale(1.5); 
+}
+.container {
+  position: relative;
+  max-width: 830px; /* Maximum width */
+  margin: 0 auto; /* Center it */
+}
+
+.container .content {
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  /*background: rgb(47, 175, 160);  Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 790px; /* Full width */
+  padding: 20px; /* Some padding */
+  margin: 10px;
+  border-radius: 10px;
+}
+@media screen and (max-width: 560px) {
+  .container {
+  position: relative;
+  width: 90%; /* Maximum width */
+  margin: 0; /* Center it */
+}
+  .container .content {
+    width: 90%;
+    position: relative;
+    /*bottom: 0; */
+    padding:15px;
+    margin: 5px;
+    /*background: rgba(0, 0, 0, 0.5); */
+      border-radius: 10px;
+      }
+  
+    .cwa-social{
+      margin-left: auto;
+      }
+      .col-img{
+       width: 40%;
+       height: 30%;
+        }
+  .foot{
+    font-size: 14px;
+  }
+}
+
+.column {
+  float: left;
+  padding: 10px;
+  }
+
+.left {
+  width: 40%;
+}
+
+.right {
+  width: 60%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
